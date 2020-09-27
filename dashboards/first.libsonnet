@@ -33,7 +33,7 @@ local gauge = promgrafonnet.gauge;
             interval='1m',
           ));
         
-        dashboard.new('Allen Ma's dashboards', time_from='now-1h')
+        dashboard.new('Allen Ma's dashboard', time_from='now-1h')
         .addTemplate(
           {
             current: {
@@ -55,7 +55,6 @@ local gauge = promgrafonnet.gauge;
             'instance',
             '$datasource',
             'label_values(node_exporter_build_info{%(nodeExporterSelector)s}, instance)' % $._config,
-            refresh='time',
           )
         )
         .addRow(
