@@ -33,7 +33,7 @@ local gauge = promgrafonnet.gauge;
             interval='1m',
           ));
         
-        dashboard.new('Allen Ma's dashboard', time_from='now-1h')
+        dashboard.new('Allen Ma dash', time_from='now-1h')
         .addTemplate(
           {
             current: {
