@@ -8,7 +8,7 @@
                         alert: 'HighCPUPressure',
                         expr: |||
                             (
-                                100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > %(cpuPressureThreshold)
+                                100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > %(cpuPressureThreshold)d
                             )
                         ||| % $._config,
                         'for': '1h',
